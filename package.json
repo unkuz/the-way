@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 80",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@pixi/react": "^7.1.0",
@@ -24,6 +25,7 @@
     "next": "13.4.10",
     "pixi.js": "^7.2.4",
     "postcss": "8.4.26",
+    "prettier": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-use": "^17.4.0",
