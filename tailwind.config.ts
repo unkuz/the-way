@@ -11,6 +11,15 @@ export default {
       fontFamily: {
         cuz: 'Cuz',
       },
+      keyframes: {
+        loading: {
+          '0%': { left: '-100%', width: '100%' },
+          '100%': { left: '100%', width: '100%' },
+        },
+      },
+      animation: {
+        loading: 'loading 1s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

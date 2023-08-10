@@ -9,9 +9,9 @@ export const Dev = () => {
   useEffect(() => {
     gsap.to(ref.current!, {
       translateY: '-200vh',
-      duration: 1,
+      duration: 0,
       ease: 'power4.inOut',
-      delay: 3,
+      delay: 0,
     })
   }, [])
 
@@ -67,9 +67,12 @@ export const Dev = () => {
         </div>
         <div
           ref={ref2}
-          className="w-full h-screen  flex justify-center items-center text-[1rem]"
+          className="w-full h-screen  flex justify-center items-center text-[1rem] flex-col gap-[10px]"
         >
-          <span>This site is under development</span>
+          <span className="font-bold">This site is under development</span>
+          <div className="w-[150px] h-[3px] relative overflow-hidden">
+            <div className="h-full  bg-black animate-loading absolute "></div>
+          </div>
         </div>
       </main>
     </div>
