@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react'
 export const Dev = () => {
   const ref = useRef<HTMLDivElement>(null)
   const ref2 = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     gsap.to(ref.current!, {
       translateY: '-200vh',
@@ -13,15 +14,11 @@ export const Dev = () => {
       delay: 3,
     })
   }, [])
+
   return (
     <div className="w-full h-screen overflow-hidden">
       <main ref={ref} className="w-full">
-        <div
-          className="w-full h-[200vh] bg-black "
-          style={{
-            clipPath: 'polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0)',
-          }}
-        >
+        <div className="w-full h-[200vh] bg-black ">
           <div className="h-[100vh] flex justify-center items-center ">
             <svg
               className="invert w-[150px] "
@@ -72,7 +69,6 @@ export const Dev = () => {
           ref={ref2}
           className="w-full h-screen  flex justify-center items-center text-[1rem]"
         >
-          <span className="">🥕</span>
           <span>This site is under development</span>
         </div>
       </main>

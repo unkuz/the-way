@@ -17,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className)} suppressHydrationWarning={true}>
+      <body
+        className={clsx(inter.className, 'font-cuz font-[500] uppercase')}
+        suppressHydrationWarning={true}
+      >
         {children}
         <Analytics />
       </body>

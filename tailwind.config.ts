@@ -7,7 +7,11 @@ export default {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cuz: 'Cuz',
+      },
+    },
   },
   plugins: [],
 } satisfies Config
