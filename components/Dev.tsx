@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { useEffect, useRef, useState } from 'react'
 import { useImmer } from 'use-immer'
 
-const PERCENT = 10
+const PERCENT = 15
 
 export const Dev = () => {
   const ref = useRef<HTMLDivElement>(null)
