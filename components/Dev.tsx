@@ -1,20 +1,29 @@
 'use client'
 import { gsap } from 'gsap'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useImmer } from 'use-immer'
+
+const PERCENT = 10
 
 export const Dev = () => {
   const ref = useRef<HTMLDivElement>(null)
   const ref2 = useRef<HTMLDivElement>(null)
+  const [percent, setPercent] = useImmer<number>(0)
+  const timer = useRef<NodeJS.Timer>()
 
   useEffect(() => {
-    gsap.to(ref.current!, {
-      translateY: '-200vh',
-      duration: 0,
-      ease: 'power4.inOut',
-      delay: 0,
-    })
+    gsap
+      .to(ref.current!, {
+        translateY: '-200vh',
+        duration: 1,
+        ease: 'power4.inOut',
+        delay: 3,
+      })
+      .then(() => {
+        setPercent(PERCENT)
+      })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
   return (
     <div className="w-full h-screen overflow-hidden">
       <main ref={ref} className="w-full">
@@ -69,7 +78,9 @@ export const Dev = () => {
           ref={ref2}
           className="w-full h-screen  flex justify-center items-center text-[1rem] flex-col gap-[10px]"
         >
-          <span className="font-bold">This site is under development</span>
+          <span className="font-bold ">
+            {`This site is under development (${percent}%)`}
+          </span>
           <div className="w-[150px] h-[3px] relative overflow-hidden">
             <div className="h-full  bg-black animate-loading absolute "></div>
           </div>
