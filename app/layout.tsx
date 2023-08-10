@@ -1,4 +1,4 @@
-import '@/scss/index.scss'
+import '@/scss/main.scss'
 import { Analytics } from '@vercel/analytics/react'
 import { clsx } from 'clsx'
 import { Inter } from 'next/font/google'
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={clsx(inter.className, 'font-cuz font-[500] uppercase')}
+        className={clsx(inter.className, 'font-cuz font-medium uppercase')}
         suppressHydrationWarning={true}
       >
         {children}
