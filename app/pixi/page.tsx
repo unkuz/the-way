@@ -11,7 +11,7 @@ export default function PixiApp() {
       raf
       options={{
         antialias: true,
-        background: 'yellow',
+        background: '#ffe',
         hello: true,
       }}
     ></Stage>
