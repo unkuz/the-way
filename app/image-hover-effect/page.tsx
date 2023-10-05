@@ -42,7 +42,7 @@ export default function Page() {
                 <span key={idx}>{i}</span>
               ))}
             </div>
-            <div className="w-full flex justify-end align-bottom gap-[1px]">
+            <div className="w-full flex justify-end align-bottom gap-[1px] leading-[12px]">
               {'NanoFabrics'.split('').map((i, idx) => (
                 <span key={idx}>{i}</span>
               ))}
@@ -51,12 +51,12 @@ export default function Page() {
         </div>
         <div className="absolute bottom-[15px] right-[15px] w-[175px] h-[175px] bg-[#ffffff23]   text-[.8rem] p-[15px] backdrop-blur-[20px] [clip-path:polygon(0_0,75%_0,100%_25%,100%_100%,25%_100%,0_75%)] opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 duration-200 ease-out">
           <div className="flex flex-col w-full h-full justify-between ">
-            <div>
+            <div className="leading-[12px]">
               {'Holoprints'.split('').map((i, idx) => (
                 <span key={idx}>{i}</span>
               ))}
             </div>
-            <div className="w-full flex justify-end  gap-[1px]">
+            <div className="w-full flex justify-end  gap-[1px] leading-[12px]">
               {'skinsyncs'.split('').map((i, idx) => (
                 <span key={idx}>{i}</span>
               ))}
