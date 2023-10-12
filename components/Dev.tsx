@@ -78,7 +78,7 @@ export const Dev = () => {
           ref={ref2}
           className="w-full h-screen  flex justify-center items-center text-[1rem] flex-col gap-[10px]"
         >
-          <span className="font-bold tracking-tighter font-[.9rem]">
+          <span className="font-bold tracking-tighter font-[.9rem] uppercase">
             {`_This site is under development`}
           </span>
           <div className="w-[150px] h-[3px] relative overflow-hidden">
