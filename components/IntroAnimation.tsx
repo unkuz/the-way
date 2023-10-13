@@ -14,9 +14,9 @@ export const IntroAnimation = () => {
       delay: 3,
     })
       .to(refZ.current, {
-        scale: 1000,
+        scale: 500,
         duration: 3,
-        rotate: '60deg',
+        rotate: '260deg',
       })
       .set(refX.current, {
         display: 'inline-block',
