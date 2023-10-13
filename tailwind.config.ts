@@ -10,7 +10,7 @@ export default {
     extend: {
       fontFamily: {
         cuz: 'Cuz',
-        au:'August'
+        au: 'August',
       },
       keyframes: {
         loading: {
