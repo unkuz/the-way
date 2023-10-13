@@ -1,5 +1,6 @@
-import { Dev } from '@/components/Dev'
+'use client'
+import { IntroAnimation } from '@/components/IntroAnimation'
 
 export default function HomePage() {
-  return <Dev />
+  return <IntroAnimation />
 }

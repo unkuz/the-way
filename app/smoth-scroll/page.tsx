@@ -12,7 +12,7 @@ export default function SmothScroll() {
   useEffect(() => {
     const body = document.body,
       height = scrollWrapEl.current!.getBoundingClientRect().height - 1,
-      speed = 0.04
+      speed = 0.1
     gsap.set(body, { height })
 
     let offset = 0
