@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 export const IntroAnimation = () => {
   const refZ = useRef(null)
   const refX = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let tl = gsap.timeline()
@@ -26,6 +27,12 @@ export const IntroAnimation = () => {
         transform: 'translateY(0%)',
         scale: 1,
       })
+      .set(refZ.current, {
+        display: 'none',
+      })
+      .set(containerRef.current, {
+        backgroundColor: 'black',
+      })
 
     return () => {
       tl.kill()
@@ -33,7 +40,10 @@ export const IntroAnimation = () => {
   }, [])
 
   return (
-    <div className="w-screen h-screen  relative font-au overflow-hidden">
+    <div
+      ref={containerRef}
+      className="w-screen h-screen  relative font-au overflow-hidden"
+    >
       <span
         className="uppercase text-[50px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         ref={refZ}
@@ -49,7 +59,7 @@ export const IntroAnimation = () => {
           .split('')
           .map((i, j) => (
             <span
-              className="inline-block scale-0 translate-y-[100%] leading-[20px] text-[.9rem]"
+              className="inline-block scale-0 translate-y-[100%] leading-[20px] sm:text-[.9rem]  text-[.6rem]"
               key={j}
             >
               {i}
